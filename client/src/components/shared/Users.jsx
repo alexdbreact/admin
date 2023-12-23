@@ -9,7 +9,7 @@ export default function Users() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:3001/users")
+    fetch("https://api-two-swart.vercel.app")
       .then((response) => response.json())
       .then((json) => setUsers(json))
       .finally(() => {
