@@ -41,13 +41,13 @@ const UserModel = require("./models/Users")
 app.get("/users",async (req, res)=>{
     const users = await UserModel.find();
     res.json(users)
-})
+});
 
 //create user
 
 app.get("/",(req, res)=>{
-    res.send("<h1>kkjll<h1>")
-})
+    res.send("<h1>Admin Dashboard<h1>")
+});
  // start server on port
 
 app.listen( _Port , ()=>{
