@@ -9,7 +9,7 @@ export default function Users() {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://dashboard-pied-nu.vercel.app")
+    fetch("https://dashboard-pied-nu.vercel.app/users")
       .then((response) => response.json())
       .then((json) => setUsers(json))
       .finally(() => {
