@@ -1,27 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors")
-app.use(cors(
-      {
-   origin: "https://admin-delta-hazel.vercel.app", // restrict calls to those this address
-    methods: ["GET","POST"] ,
-    credentials: true,
-  }
-));
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://admin-delta-hazel.vercel.app"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-
-
-
-
+app.use(cors());
 app.use(express.json({limit: '200mb', extended: true}))
-app.use(express.urlencoded({limit: '200mb', extended: true}))
-
 const _Port = "3001"
 
 
@@ -41,13 +22,13 @@ const UserModel = require("./models/Users")
 app.get("/users",async (req, res)=>{
     const users = await UserModel.find();
     res.json(users)
-});
+})
 
 //create user
 
 app.get("/",(req, res)=>{
-    res.send("<h1>Admin Dashboard<h1>")
-});
+    res.send("<h1>kkjll<h1>")
+})
  // start server on port
 
 app.listen( _Port , ()=>{
